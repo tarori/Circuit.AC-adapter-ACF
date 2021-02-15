@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
@@ -1935,26 +1935,79 @@ grid 5 mm, outline 3 x 7.5 mm</description>
 <library name="my_connector">
 <packages>
 <package name="TESTPIN-BIG">
-<pad name="1" x="0" y="0" drill="1.4" diameter="3"/>
+<pad name="1" x="0" y="0" drill="1.2" diameter="2"/>
 <text x="-1.905" y="1.905" size="1.016" layer="25">&gt;VALUE</text>
-</package>
-<package name="TESTPIN">
-<pad name="1" x="0" y="0" drill="0.9" diameter="1.5"/>
-<text x="-1.905" y="1.905" size="1.016" layer="25">&gt;VALUE</text>
+<text x="-1.905" y="1.905" size="1.016" layer="27">&gt;VALUE</text>
 </package>
 <package name="HOLE_3.2">
 <hole x="0" y="0" drill="3.2"/>
-<circle x="0" y="0" radius="4" width="0.127" layer="51"/>
-<circle x="0" y="0" radius="4.016090625" width="0.127" layer="41"/>
-<circle x="0" y="0" radius="4.016090625" width="0.127" layer="42"/>
+<circle x="0" y="0" radius="2.8" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="3" width="0.127" layer="41"/>
+<circle x="0" y="0" radius="3" width="0.127" layer="42"/>
+</package>
+<package name="HEATSINK2">
+<wire x1="3" y1="0" x2="7.5" y2="0" width="0.508" layer="21"/>
+<wire x1="7.5" y1="-5" x2="7.5" y2="0" width="0.508" layer="21"/>
+<wire x1="7.5" y1="0" x2="7.5" y2="6" width="0.508" layer="21"/>
+<wire x1="3" y1="0" x2="3" y2="6" width="0.508" layer="21"/>
+<wire x1="3" y1="0" x2="-3" y2="0" width="0.508" layer="21"/>
+<wire x1="-3" y1="0" x2="-7.5" y2="0" width="0.508" layer="21"/>
+<wire x1="-7.5" y1="0" x2="-7.5" y2="6" width="0.508" layer="21"/>
+<wire x1="-7.5" y1="0" x2="-7.5" y2="-5" width="0.508" layer="21"/>
+<wire x1="-3" y1="0" x2="-3" y2="6" width="0.508" layer="21"/>
+<wire x1="-2.5" y1="-0.5" x2="2.5" y2="-0.5" width="0.508" layer="21"/>
+<text x="-3.81" y="7.62" size="1.27" layer="25">&gt;NAME</text>
+<pad name="HT1" x="0" y="3" drill="1.8"/>
+</package>
+<package name="TESTPIN">
+<pad name="1" x="0" y="0" drill="0.9" diameter="2"/>
+<text x="-1.905" y="1.905" size="1.016" layer="25">&gt;VALUE</text>
+<text x="-1.905" y="1.905" size="1.016" layer="27">&gt;VALUE</text>
+</package>
+<package name="HEATSINK1">
+<wire x1="5" y1="0" x2="8.25" y2="0" width="0.508" layer="21"/>
+<wire x1="8.25" y1="0" x2="8.25" y2="16" width="0.508" layer="21"/>
+<wire x1="5" y1="0" x2="5" y2="16" width="0.508" layer="21"/>
+<wire x1="5" y1="0" x2="-5" y2="0" width="0.508" layer="21"/>
+<wire x1="-5" y1="0" x2="-5" y2="16" width="0.508" layer="21"/>
+<wire x1="-5" y1="0" x2="-8.25" y2="0" width="0.508" layer="21"/>
+<wire x1="-8.25" y1="0" x2="-8.25" y2="16" width="0.508" layer="21"/>
+<wire x1="-2.5" y1="-0.5" x2="2.5" y2="-0.5" width="0.508" layer="21"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<pad name="HT1" x="-5" y="3.5" drill="1.8"/>
+<pad name="HT2" x="5" y="3.5" drill="1.8"/>
+</package>
+<package name="HEATSINK3">
+<wire x1="-11.75" y1="0" x2="-11.75" y2="10" width="0.508" layer="21"/>
+<wire x1="-11.75" y1="0" x2="-11.75" y2="-7" width="0.508" layer="21"/>
+<wire x1="-11.75" y1="0" x2="-7" y2="0" width="0.508" layer="21"/>
+<wire x1="-7" y1="0" x2="-3" y2="0" width="0.508" layer="21"/>
+<wire x1="-3" y1="0" x2="3" y2="0" width="0.508" layer="21"/>
+<wire x1="3" y1="0" x2="7" y2="0" width="0.508" layer="21"/>
+<wire x1="7" y1="0" x2="11.75" y2="0" width="0.508" layer="21"/>
+<wire x1="11.75" y1="0" x2="11.75" y2="10" width="0.508" layer="21"/>
+<wire x1="11.75" y1="0" x2="11.75" y2="-7" width="0.508" layer="21"/>
+<wire x1="7" y1="0" x2="7" y2="10" width="0.508" layer="21"/>
+<wire x1="-3" y1="0" x2="-3" y2="10" width="0.508" layer="21"/>
+<wire x1="-7" y1="0" x2="-7" y2="10" width="0.508" layer="21"/>
+<wire x1="3" y1="0" x2="3" y2="10" width="0.508" layer="21"/>
+<wire x1="-2.5" y1="-0.5" x2="2.5" y2="-0.5" width="0.508" layer="21"/>
+<text x="-7.62" y="11.43" size="1.27" layer="25">&gt;NAME</text>
+<pad name="HT1" x="-8.9" y="3" drill="1.8"/>
+<pad name="HT2" x="8.9" y="3" drill="1.8"/>
 </package>
 </packages>
 <symbols>
 <symbol name="TESTPIN">
 <pin name="1" x="0" y="-2.54" visible="off" length="middle" direction="pas" rot="R90"/>
 <circle x="0" y="2.54" radius="1.27" width="0.254" layer="94"/>
-<text x="2.54" y="0" size="1.778" layer="95">&gt;VALUE</text>
+<text x="0.635" y="4.445" size="1.778" layer="95" rot="R90">&gt;VALUE</text>
 <circle x="0" y="2.54" radius="0.635" width="0.254" layer="94"/>
+</symbol>
+<symbol name="HEATSINK">
+<text x="0" y="1.27" size="2.54" layer="95">&gt;NAME</text>
+<text x="0" y="-3.81" size="2.54" layer="96">&gt;VALUE</text>
+<pin name="HT" x="0" y="-5.08" visible="off" length="middle" direction="pas" rot="R90"/>
 </symbol>
 <symbol name="NAME&amp;VALUE">
 <text x="0" y="1.27" size="2.54" layer="95">&gt;NAME</text>
@@ -1991,6 +2044,37 @@ grid 5 mm, outline 3 x 7.5 mm</description>
 </gates>
 <devices>
 <device name="" package="HOLE_3.2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HEATSINK" prefix="HT">
+<gates>
+<gate name="G$2" symbol="HEATSINK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-1" package="HEATSINK1">
+<connects>
+<connect gate="G$2" pin="HT" pad="HT1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-2" package="HEATSINK2">
+<connects>
+<connect gate="G$2" pin="HT" pad="HT1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-3" package="HEATSINK3">
+<connects>
+<connect gate="G$2" pin="HT" pad="HT1"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2688,16 +2772,16 @@ Soichiro Iwataki&lt;br&gt;
 <part name="R2" library="my_rcl" deviceset="R" device="-1608" value="250k"/>
 <part name="R4" library="my_rcl" deviceset="R" device="-1608" value="47k"/>
 <part name="C3" library="my_rcl" deviceset="C" device="-1608" value="0.1u"/>
-<part name="C6" library="my_rcl" deviceset="C" device="-2012" value="1u"/>
+<part name="C6" library="my_rcl" deviceset="C" device="-1608" value="1u"/>
 <part name="R3" library="my_rcl" deviceset="R" device="-1608" value="47k"/>
-<part name="C4" library="my_rcl" deviceset="C" device="-2012" value="100p"/>
+<part name="C4" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
 <part name="R17" library="my_rcl" deviceset="R" device="-1608" value="22k"/>
 <part name="R5" library="my_rcl" deviceset="R" device="-1608" value="10k"/>
 <part name="R6" library="my_rcl" deviceset="R" device="-1608" value="47k"/>
 <part name="Q4" library="my_ic" deviceset="NMOS" device="-SMD"/>
 <part name="C12" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
 <part name="R7" library="my_rcl" deviceset="R" device="-1608" value="250k"/>
-<part name="D5" library="my_rcl" deviceset="DIODE" device="-2" value="60V1A"/>
+<part name="D5" library="my_rcl" deviceset="DIODE" device="-7" value="60V1A"/>
 <part name="C13" library="my_rcl" deviceset="C" device="-1608" value="3300p"/>
 <part name="C11" library="my_rcl" deviceset="C" device="-2012" value="10u"/>
 <part name="R18" library="my_rcl" deviceset="R" device="-1608" value="10"/>
@@ -2713,6 +2797,13 @@ Soichiro Iwataki&lt;br&gt;
 <part name="R10" library="my_rcl" deviceset="R" device="-7.5" value="1M"/>
 <part name="TP6" library="my_connector" deviceset="TESTPIN" device="-BIG" value="GND"/>
 <part name="C5" library="my_rcl" deviceset="C" device="-1608" value="0.1u"/>
+<part name="HT1" library="my_connector" deviceset="HEATSINK" device="-2" value="HEATSINK-2"/>
+<part name="HT2" library="my_connector" deviceset="HEATSINK" device="-2"/>
+<part name="HT3" library="my_connector" deviceset="HEATSINK" device="-2" value="HEATSINK-2"/>
+<part name="SUPPLY8" library="my_supply" deviceset="GND" device=""/>
+<part name="SUPPLY9" library="my_supply" deviceset="GND" device=""/>
+<part name="R27" library="my_rcl" deviceset="R" device="-1608" value="10"/>
+<part name="C22" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
 </parts>
 <sheets>
 <sheet>
@@ -2720,9 +2811,9 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="144.78" y1="93.98" x2="144.78" y2="2.54" width="0.762" layer="97"/>
 </plain>
 <instances>
-<instance part="F1" gate="G$1" x="-12.7" y="81.28" smashed="yes">
-<attribute name="NAME" x="-17.78" y="83.82" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-17.78" y="76.2" size="1.778" layer="96"/>
+<instance part="F1" gate="G$1" x="-12.7" y="71.12" smashed="yes">
+<attribute name="NAME" x="-17.78" y="73.66" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-17.78" y="66.04" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="-2.54" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-3.302" y="77.851" size="1.778" layer="95" rot="MR0"/>
@@ -2759,9 +2850,9 @@ Soichiro Iwataki&lt;br&gt;
 <attribute name="NAME" x="173.99" y="62.23" size="1.778" layer="95"/>
 <attribute name="VALUE" x="163.83" y="71.755" size="1.778" layer="96"/>
 </instance>
-<instance part="C15" gate="G$1" x="165.1" y="86.36" smashed="yes" rot="MR0">
-<attribute name="NAME" x="164.338" y="88.011" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="164.338" y="83.947" size="1.778" layer="96" rot="MR0"/>
+<instance part="C15" gate="G$1" x="177.8" y="86.36" smashed="yes">
+<attribute name="NAME" x="178.562" y="88.011" size="1.778" layer="95"/>
+<attribute name="VALUE" x="178.562" y="83.947" size="1.778" layer="96"/>
 </instance>
 <instance part="R19" gate="G$1" x="170.18" y="91.44" smashed="yes">
 <attribute name="NAME" x="166.37" y="92.9386" size="1.778" layer="95"/>
@@ -3036,6 +3127,28 @@ Soichiro Iwataki&lt;br&gt;
 <attribute name="NAME" x="52.07" y="84.455" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.07" y="81.915" size="1.778" layer="96"/>
 </instance>
+<instance part="HT1" gate="G$2" x="172.72" y="106.68" smashed="yes">
+<attribute name="NAME" x="172.72" y="107.95" size="2.54" layer="95"/>
+<attribute name="VALUE" x="172.72" y="102.87" size="2.54" layer="96"/>
+</instance>
+<instance part="HT2" gate="G$2" x="86.36" y="76.2" smashed="yes" rot="MR0">
+<attribute name="NAME" x="86.36" y="77.47" size="2.54" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="86.36" y="72.39" size="2.54" layer="96" rot="MR0"/>
+</instance>
+<instance part="HT3" gate="G$2" x="198.12" y="106.68" smashed="yes">
+<attribute name="NAME" x="198.12" y="107.95" size="2.54" layer="95"/>
+<attribute name="VALUE" x="198.12" y="102.87" size="2.54" layer="96"/>
+</instance>
+<instance part="SUPPLY8" gate="GND" x="172.72" y="99.06" smashed="yes"/>
+<instance part="SUPPLY9" gate="GND" x="198.12" y="99.06" smashed="yes"/>
+<instance part="R27" gate="G$1" x="96.52" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="95.0214" y="54.61" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="99.822" y="54.61" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C22" gate="G$1" x="91.44" y="55.88" smashed="yes" rot="MR0">
+<attribute name="NAME" x="90.17" y="56.515" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="90.17" y="53.975" size="1.778" layer="96" rot="MR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -3046,8 +3159,8 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="-2.54" y1="71.12" x2="2.54" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="73.66" x2="-2.54" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="1"/>
-<pinref part="TP2" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="71.12" x2="-2.54" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="F1" gate="G$1" pin="P$2"/>
+<wire x1="-7.62" y1="71.12" x2="-2.54" y2="71.12" width="0.1524" layer="91"/>
 <junction x="-2.54" y="71.12"/>
 </segment>
 </net>
@@ -3057,9 +3170,9 @@ Soichiro Iwataki&lt;br&gt;
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-2.54" y1="81.28" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="4"/>
+<pinref part="TP1" gate="G$1" pin="1"/>
+<wire x1="-2.54" y1="81.28" x2="-22.86" y2="81.28" width="0.1524" layer="91"/>
 <junction x="-2.54" y="81.28"/>
-<wire x1="-7.62" y1="81.28" x2="-2.54" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="VP" class="0">
@@ -3132,6 +3245,14 @@ Soichiro Iwataki&lt;br&gt;
 <pinref part="R26" gate="G$1" pin="1"/>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 </segment>
+<segment>
+<pinref part="HT1" gate="G$2" pin="HT"/>
+<pinref part="SUPPLY8" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="HT3" gate="G$2" pin="HT"/>
+<pinref part="SUPPLY9" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="N$17" class="0">
 <segment>
@@ -3142,10 +3263,10 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="167.64" y1="81.28" x2="167.64" y2="78.74" width="0.1524" layer="91"/>
 <junction x="167.64" y="81.28"/>
 <wire x1="167.64" y1="81.28" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="81.28" x2="154.94" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="91.44" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
 <junction x="165.1" y="81.28"/>
-<wire x1="165.1" y1="83.82" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="C15" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -3266,8 +3387,6 @@ Soichiro Iwataki&lt;br&gt;
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="R19" gate="G$1" pin="2"/>
-<wire x1="175.26" y1="91.44" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="D6" gate="G$1" pin="K"/>
 <pinref part="C17" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="81.28" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
@@ -3276,26 +3395,13 @@ Soichiro Iwataki&lt;br&gt;
 <junction x="180.34" y="81.28"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="185.42" y1="81.28" x2="190.5" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="91.44" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
 <junction x="177.8" y="81.28"/>
 <pinref part="SJ1" gate="1" pin="2"/>
 <wire x1="205.74" y1="63.5" x2="185.42" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="63.5" x2="185.42" y2="81.28" width="0.1524" layer="91"/>
 <junction x="185.42" y="81.28"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="91.44" x2="165.1" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="C15" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="TP1" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="81.28" x2="-17.78" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="P$1"/>
+<wire x1="177.8" y1="83.82" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -3337,8 +3443,10 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="38.1" y1="66.04" x2="38.1" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="68.58" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="66.04" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="66.04" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="66.04" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="66.04" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="53.34" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="48.26" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
@@ -3380,7 +3488,8 @@ Soichiro Iwataki&lt;br&gt;
 <pinref part="Q5" gate="G$1" pin="EMIT"/>
 <wire x1="134.62" y1="12.7" x2="132.08" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="5.08" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="5.08" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="5.08" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="5.08" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="5.08" x2="132.08" y2="12.7" width="0.1524" layer="91"/>
 <junction x="96.52" y="5.08"/>
 <pinref part="C6" gate="G$1" pin="1"/>
@@ -3417,8 +3526,22 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="106.68" y1="-7.62" x2="99.06" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="-7.62" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="81.28" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
-<junction x="50.8" y="66.04"/>
+<wire x1="50.8" y1="81.28" x2="50.8" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="D3" gate="G$1" pin="A"/>
+<wire x1="106.68" y1="5.08" x2="106.68" y2="10.16" width="0.1524" layer="91"/>
+<junction x="106.68" y="5.08"/>
+<pinref part="IC1" gate="G$1" pin="COM"/>
+<wire x1="78.74" y1="86.36" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="78.74" x2="50.8" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="78.74" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
+<junction x="78.74" y="78.74"/>
+<junction x="78.74" y="66.04"/>
+<pinref part="HT2" gate="G$2" pin="HT"/>
+<wire x1="86.36" y1="66.04" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
+<junction x="86.36" y="66.04"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="58.42" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+<junction x="91.44" y="66.04"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -3476,19 +3599,13 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="101.6" y1="78.74" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
 <junction x="101.6" y="78.74"/>
 <wire x1="99.06" y1="78.74" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="COM"/>
-<wire x1="78.74" y1="86.36" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="71.12" x2="93.98" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="71.12" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="71.12" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
-<junction x="96.52" y="71.12"/>
-<pinref part="IC2" gate="G$1" pin="CS"/>
-<junction x="96.52" y="71.12"/>
-<wire x1="96.52" y1="71.12" x2="96.52" y2="48.26" width="0.1524" layer="91"/>
-<junction x="96.52" y="71.12"/>
 <wire x1="93.98" y1="71.12" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
-<junction x="93.98" y="71.12"/>
+<pinref part="R27" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="71.12" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
+<junction x="96.52" y="71.12"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -3662,8 +3779,7 @@ Soichiro Iwataki&lt;br&gt;
 <pinref part="IC2" gate="G$1" pin="FB"/>
 <wire x1="66.04" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="33.02" x2="63.5" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="7.62" x2="106.68" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="7.62" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="7.62" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="10.16" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="7.62" x2="119.38" y2="7.62" width="0.1524" layer="91"/>
@@ -3673,9 +3789,6 @@ Soichiro Iwataki&lt;br&gt;
 <pinref part="R17" gate="G$1" pin="2"/>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="2.54" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="D3" gate="G$1" pin="A"/>
-<wire x1="106.68" y1="10.16" x2="106.68" y2="7.62" width="0.1524" layer="91"/>
-<junction x="106.68" y="7.62"/>
 </segment>
 </net>
 <net name="REF" class="0">
@@ -3780,6 +3893,31 @@ Soichiro Iwataki&lt;br&gt;
 <wire x1="127" y1="60.96" x2="132.08" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="127" y1="58.42" x2="127" y2="60.96" width="0.1524" layer="91"/>
 <junction x="127" y="60.96"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="F1" gate="G$1" pin="P$1"/>
+<pinref part="TP2" gate="G$1" pin="1"/>
+<wire x1="-17.78" y1="71.12" x2="-22.86" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="175.26" y1="91.44" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="91.44" x2="177.8" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="C22" gate="G$1" pin="2"/>
+<pinref part="R27" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="53.34" x2="96.52" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="CS"/>
+<wire x1="96.52" y1="53.34" x2="96.52" y2="48.26" width="0.1524" layer="91"/>
+<junction x="96.52" y="53.34"/>
 </segment>
 </net>
 </nets>
