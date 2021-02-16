@@ -1939,7 +1939,7 @@ grid 5 mm, outline 3 x 7.5 mm</description>
 <library name="my_connector">
 <packages>
 <package name="TESTPIN-BIG">
-<pad name="1" x="0" y="0" drill="1.2" diameter="2"/>
+<pad name="1" x="0" y="0" drill="2"/>
 <text x="-1.905" y="1.905" size="1.016" layer="25">&gt;VALUE</text>
 <text x="-1.905" y="1.905" size="1.016" layer="27">&gt;VALUE</text>
 </package>
@@ -2763,8 +2763,8 @@ Soichiro Iwataki&lt;br&gt;
 <part name="SJ1" library="Connector_Robotech" deviceset="SJ" device="1608" value="F1"/>
 <part name="IC1" library="my_ic" deviceset="UCC27712" device=""/>
 <part name="IC2" library="my_ic" deviceset="UCC28780" device=""/>
-<part name="Q1" library="my_ic" deviceset="NMOS" device="" value="TK8Q60"/>
-<part name="Q2" library="my_ic" deviceset="NMOS" device="" value="TK8Q60"/>
+<part name="Q1" library="my_ic" deviceset="NMOS" device="" value="2SK3115"/>
+<part name="Q2" library="my_ic" deviceset="NMOS" device="" value="TK13A60"/>
 <part name="R11" library="my_rcl" deviceset="R" device="-1608" value="10k"/>
 <part name="R12" library="my_rcl" deviceset="R" device="-1608" value="10k"/>
 <part name="R9" library="my_rcl" deviceset="R" device="-1608" value="10"/>
@@ -2782,7 +2782,7 @@ Soichiro Iwataki&lt;br&gt;
 <part name="R17" library="my_rcl" deviceset="R" device="-1608" value="22k"/>
 <part name="R5" library="my_rcl" deviceset="R" device="-1608" value="10k"/>
 <part name="R6" library="my_rcl" deviceset="R" device="-1608" value="47k"/>
-<part name="Q4" library="my_ic" deviceset="NMOS" device="-SMD"/>
+<part name="Q4" library="my_ic" deviceset="NMOS" device="-SMD" value="BSS127"/>
 <part name="C12" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
 <part name="R7" library="my_rcl" deviceset="R" device="-1608" value="250k"/>
 <part name="D5" library="my_rcl" deviceset="DIODE" device="-7" value="60V1A"/>
